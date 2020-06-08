@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: GATEWAY-SERVER
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #启用基于服务发现的路由定位
+          lowerCaseServiceId: true #启用服务实例id名称小写支持
+eureka:
+  instance:
+    preferIpAddress: true #将自己的IP注册到Eureka Server。若不配置或设置为false，表示注册微服务所在操作系统的hostname到Eureka Server）
+    instanceId: ${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:20001/eureka/
+    registerWithEureka: true #服务注册 false 自己不注册到服务中心
+    fetchRegistry: true #服务发现  表示自己端就是注册中心 我的职责就是维护服务实例 false  自己不获取注册信息
+
+server:
+  port: 10001
