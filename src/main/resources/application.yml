@@ -6,35 +6,35 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowCredentials: true # ÔÊĞíĞ¯´øÈÏÖ¤ĞÅÏ¢
-            allowedOrigins: "*"    # ÔÊĞí¿çÓòµÄÔ´(ÍøÕ¾ÓòÃû/ip)£¬ÉèÖÃ*ÎªÈ«²¿
-            allowedHeaders: "*"    # ÔÊĞí¿çÓòÇëÇóÀïµÄhead×Ö¶Î£¬ÉèÖÃ*ÎªÈ«²¿
+            allowCredentials: true # å…è®¸æºå¸¦è®¤è¯ä¿¡æ¯
+            allowedOrigins: "*"    # å…è®¸è·¨åŸŸçš„æº(ç½‘ç«™åŸŸå/ip)ï¼Œè®¾ç½®*ä¸ºå…¨éƒ¨
+            allowedHeaders: "*"    # å…è®¸è·¨åŸŸè¯·æ±‚é‡Œçš„headå­—æ®µï¼Œè®¾ç½®*ä¸ºå…¨éƒ¨
             allowedMethods:
               - GET
               - POST
               - PATCH
               - PUT
               - DELETE
-              - OPTIONS   # ÔÊĞí¿çÓòµÄmethod£¬ Ä¬ÈÏÎªGETºÍOPTIONS£¬ÉèÖÃ*ÎªÈ«²¿
+              - OPTIONS   # å…è®¸è·¨åŸŸçš„methodï¼Œ é»˜è®¤ä¸ºGETå’ŒOPTIONSï¼Œè®¾ç½®*ä¸ºå…¨éƒ¨
       discovery:
         locator:
-          enabled: true #ÆôÓÃ»ùÓÚ·şÎñ·¢ÏÖµÄÂ·ÓÉ¶¨Î»
-          lowerCaseServiceId: true #·şÎñÃû³Æ´óĞ¡Ğ´ºöÂÔ
+          enabled: true #å¯ç”¨åŸºäºæœåŠ¡å‘ç°çš„è·¯ç”±å®šä½
+          lowerCaseServiceId: true #æœåŠ¡åç§°å¤§å°å†™å¿½ç•¥
 eureka:
   instance:
-    preferIpAddress: true #½«×Ô¼ºµÄIP×¢²áµ½Eureka Server¡£Èô²»ÅäÖÃ»òÉèÖÃÎªfalse£¬±íÊ¾×¢²áÎ¢·şÎñËùÔÚ²Ù×÷ÏµÍ³µÄhostnameµ½Eureka Server£©
+    preferIpAddress: true #å°†è‡ªå·±çš„IPæ³¨å†Œåˆ°Eureka Serverã€‚è‹¥ä¸é…ç½®æˆ–è®¾ç½®ä¸ºfalseï¼Œè¡¨ç¤ºæ³¨å†Œå¾®æœåŠ¡æ‰€åœ¨æ“ä½œç³»ç»Ÿçš„hostnameåˆ°Eureka Serverï¼‰
     instanceId: ${spring.application.name}:${server.port}
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:20001/eureka/
-    registerWithEureka: true #·şÎñ×¢²á false ×Ô¼º²»×¢²áµ½·şÎñÖĞĞÄ
-    fetchRegistry: true #·şÎñ·¢ÏÖ  ±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı false  ×Ô¼º²»»ñÈ¡×¢²áĞÅÏ¢
+    registerWithEureka: true #æœåŠ¡æ³¨å†Œ false è‡ªå·±ä¸æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒ
+    fetchRegistry: true #æœåŠ¡å‘ç°  è¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒ æˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ false  è‡ªå·±ä¸è·å–æ³¨å†Œä¿¡æ¯
 
 management:
   endpoints:
     web:
       exposure:
-        include: '*' #¿ª·ÅËùÓĞÒ³Ãæ½Úµã  Ä¬ÈÏÖ»¿ªÆôÁËhealth¡¢infoÁ½¸ö½Úµã
+        include: '*' #å¼€æ”¾æ‰€æœ‰é¡µé¢èŠ‚ç‚¹  é»˜è®¤åªå¼€å¯äº†healthã€infoä¸¤ä¸ªèŠ‚ç‚¹
   endpoint:
     health:
       show-details: always
