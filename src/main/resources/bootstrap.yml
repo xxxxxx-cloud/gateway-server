@@ -5,9 +5,11 @@ spring:
     nacos:
       discovery:
         serverAddr: 127.0.0.1:8848
+        namespace: public
+        group: ${spring.application.name}
       config:
-        group: develop
-        namespace: GATEWAY-SERVER
+        group: ${spring.application.name}
+        namespace: public
         serverAddr: 127.0.0.1:8848
 #        extensionConfigs:
 #          - data-id:
@@ -16,6 +18,5 @@ spring:
 #          - data-id:
 #              group:
 #              refresh:
-
-
-
+server:
+  port: 10001
