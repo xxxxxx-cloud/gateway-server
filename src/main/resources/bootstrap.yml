@@ -5,18 +5,18 @@ spring:
     nacos:
       discovery:
         serverAddr: 127.0.0.1:8848
-        namespace: public
+        namespace: develop
         group: ${spring.application.name}
       config:
         group: ${spring.application.name}
-        namespace: public
+        namespace: develop
         serverAddr: 127.0.0.1:8848
 #        extensionConfigs:
-#          - data-id:
-#            group:
-#            refresh:
-#          - data-id:
-#              group:
-#              refresh:
+#          - data-id: DATA-SOURCE.yml
+#            group: develop-common
+#            refresh: true
+#          - data-id: COMMON.yml
+#              group: develop-common
+#              refresh: true
 server:
   port: 10001
