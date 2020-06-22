@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: GATEWAY-SERVER
+  cloud:
+    nacos:
+      discovery:
+        serverAddr: 127.0.0.1:8848
+      config:
+        group: develop
+        namespace: GATEWAY-SERVER
+        serverAddr: 127.0.0.1:8848
+#        extensionConfigs:
+#          - data-id:
+#            group:
+#            refresh:
+#          - data-id:
+#              group:
+#              refresh:
+
+
+
