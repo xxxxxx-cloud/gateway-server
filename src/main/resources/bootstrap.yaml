@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: GATEWAY-SERVER
+  cloud:
+    nacos:
+      discovery:
+        serverAddr: 127.0.0.1:8848
+      config:
+        serverAddr: 127.0.0.1:8848
+        fileExtension: yaml
+        extConfig[0]:
+          dataId: COMMON-FEIGN.yaml
+          refresh: true
+
+server:
+  port: 10001
