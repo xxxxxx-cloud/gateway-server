@@ -11,10 +11,17 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-
-//@Component
+/**
+ * @author 金世强
+ */
+@Component
 public class AuthFilter implements GlobalFilter, Ordered {
 
+    /**
+     * @param exchange exchange
+     * @param chain    chain
+     * @return Mono<Void>
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
@@ -35,7 +42,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
      * 这是Ordered接口的中的方法
      * 过滤器有一个优先级的问题，这个值越小，优先级越高
      *
-     * @return
+     * @return 优先级
      */
     @Override
     public int getOrder() {
