@@ -10,9 +10,7 @@ spring:
         serverAddr: 127.0.0.1:8848
         fileExtension: yaml
         extConfig:
-          - dataId: common-feign.yaml
-            refresh: true
-          - dataId: springboot-health.yaml
+          - dataId: common-health.yaml
             refresh: true
         namespace: dev
 

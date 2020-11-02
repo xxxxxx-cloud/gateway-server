@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 /**
  * @author 金世强
  */
-@Component
+//@Component
 public class AuthFilter implements GlobalFilter, Ordered {
 
     /**
